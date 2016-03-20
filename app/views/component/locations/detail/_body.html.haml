@@ -29,6 +29,15 @@
           %section.location-sidebar-content
             = render 'component/detail/location_holiday_schedule', schedules: @location.holiday_schedules
 
+      - if @location.address.present?
+        %section.address-box.location-sidebar-section
+          %h1 Physical Address
+          %section.location-sidebar-content
+            %section.address.icon-text-block
+              %i.fa.fa-map-marker
+              %span
+                = render 'component/detail/address', location: @location, lines: 2
+
       - if (@location.fields & location_contact_fields).any?
         %section.contact-box-general.location-sidebar-section
           %h1 General Contact Info
@@ -59,15 +68,6 @@
                 %section.phones.location-sidebar-content-group
                   - contact.phones.each do |phone|
                     = render 'component/detail/phone', phone: phone, show_phone_type_and_department: true
-
-      - if @location.address.present?
-        %section.address-box.location-sidebar-section
-          %h1 Physical Address
-          %section.location-sidebar-content
-            %section.address.icon-text-block
-              %i.fa.fa-map-marker
-              %span
-                = render 'component/detail/address', location: @location, lines: 2
 
       - if @location.mail_address.present?
         %section.address-box.location-sidebar-section
