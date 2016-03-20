@@ -4,6 +4,9 @@ ruby '2.2.3'
 gem 'railties', '~> 4.2'
 gem 'actionmailer'
 
+
+gem 'redcarpet', '~> 3.3'
+
 # FRONT END
 
 # Use SCSS for stylesheets.

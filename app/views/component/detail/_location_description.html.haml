@@ -2,4 +2,4 @@
   %h1
     #{t('location_fields.description')}:
   %span.character-limited
-    = location.description
+    = Redcarpet::Markdown.new(Redcarpet::Render::HTML.new(no_links: true)).render(location.description).html_safe

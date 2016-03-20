@@ -7,7 +7,7 @@
             = superscript_ordinals(full_name_content_for(organization))
       %section
         %p.description
-          = organization.description
+          = Redcarpet::Markdown.new(Redcarpet::Render::HTML.new(no_links: true)).render(organization.description).html_safe
         = render 'component/detail/website', website: organization.website
         = render 'component/detail/email', email: organization.email
 
