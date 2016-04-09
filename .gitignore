@@ -54,3 +54,5 @@ rerun.txt
 
 .gemnasium.yml
 .idea
+.DS_Store
+ohana-web-search.iml
