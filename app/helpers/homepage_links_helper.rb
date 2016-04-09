@@ -56,9 +56,13 @@ module HomepageLinksHelper
   def list_of_links(links)
     links.each do |link_text|
       concat(content_tag(:li) do
-        link_to_keyword(keyword_from_link_text(link_text), link_text)
+        link_to_category(keyword_from_link_text(link_text), link_text)
       end)
     end
+  end
+
+  def link_to_category(category, link_text)
+    link_to(link_text, "http://sacsos.org/locations?category=#{category}")
   end
 
   def link_to_keyword(keyword, link_text)
