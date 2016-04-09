@@ -112,6 +112,7 @@
     border: 1px solid rgba($input-border-color, 0.4);
     border-left: 1px solid rgba($input-border-color, 0.2);
     background: $button-bg;
+    background: $light-yellow;
 
     font-size: $font_size_115;
     vertical-align: baseline;
@@ -123,11 +124,9 @@
 
     > span {
       @include inline-block();
-      color: $black; // IE fallback
-      color: midtone($black, .5);
-      text-shadow: 1px 4px 6px $accentA-light, 0 0 0 $black, 1px 4px 6px $accentA-light;
       line-height: 20px; // Needed by Opera to handle vertical-align:middle properly
-      color: $button-color;
+      color: $black; // IE fallback
+      color: midtone($black, .7);
     }
 
     >.fa {

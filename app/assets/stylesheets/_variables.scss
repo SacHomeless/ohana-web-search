@@ -17,11 +17,20 @@ $greyscale_lightest: rgb(252,252,252);
 $white: rgb(255,255,255);
 
 // Primary.
+$gold: #b8a772;
+$light_yellow: #f1daa1;
+$green: #005826;
+$shaded-white: shade($white, 15);
+
 $primary: rgb(137,209,226);
+$primary: $green;
 $primary-dark: shade($primary, 25);
 $primary-darkest: shade($primary, 50);
 $primary-light: tint($primary, 25);
 $primary-lightest: tint($primary, 50);
+
+
+//Colors: Gold = hex#b8a772;  Green = hex#005826;  Lt. Yellow = hex#f1daa1.
 
 // Accents.
 $accentA-base: rgb(209,249,148);
@@ -111,17 +120,20 @@ $button-popup-disabled-bg:          tint($greyscale_light, 60);
 // Buttons.
 //
 $button-color:                rgba($black,.5);
-$button-hover-color:          $complementA;
+$button-hover-color:          $black;
 $button-fa-color:             $primary-darkest;
 $button-bg:                   $accentA-light;
 $button-hover-bg:             shade($accentA-light,5);
+$button-hover-bg:             shade($light_yellow,5);
 
 $button-disabled-color:       $greyscale_light;
 $button-disabled-bg:          tint($greyscale_light, 60);
 
 $button-small-color:         tint($black, 25);
+$button-small-color:         $shaded-white;
 $button-small-fa-color:      $primary-darkest;
 $button-small-hover-color:   $complementA;
+$button-small-hover-color:   white;
 $button-small-bg:            none;
 $button-small-bg-hover:      $primary-light;
 

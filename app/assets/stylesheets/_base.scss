@@ -362,6 +362,12 @@ body {
       margin-top: 10px;
     }
   }
+
+  a {
+     color: white;
+     color: $shaded_white;
+     font-style: normal;
+  }
 }
 
 //=================================================================================
@@ -439,7 +445,8 @@ body {
 
     color: $black; // IE fallback
     color: rgba($black, .7);
-    text-shadow: 1px 4px 6px lightest($primary), 0 0 0 $black, 1px 4px 6px lightest($primary);
+    color: rgba($white, .9);
+    text-shadow: 1px 4px 6px darkest($primary), 0 0 0 $white, 1px 4px 6px darkest($primary);
   }
 
   .input-search-big {
@@ -480,6 +487,10 @@ body {
   @include box-sizing(border-box);
   max-height: 23px;
   overflow: hidden;
+
+  span {
+     color: white;
+  }
 }
 
 #search-options {
