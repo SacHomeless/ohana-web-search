@@ -66,29 +66,44 @@ feedback_email:
 #     - text for link 2
 homepage_links:
   general:
-    Government Assistance:
-      - Health Insurance
-      - Medicare
-      - SFMNP (Food vouchers for seniors)
-      - SNAP (Food Stamps)
-      - 'WIC (Women, Infants, & Children)'
+    Housing/Shelter:
+      - Shelters
+      - Transitional Housing
+      - Permanent Supportive Housing
+      - Affordable Housing
 
-    Children, Teens, & Families:
-      - Abuse Prevention
-      - Child Care
-      - Counseling
-      - Mentoring Programs
-      - Youth Development
+    Food:
+      - Hot Meals
+      - Food Pantries
+      - EBT Locations
+      - WIC
+
+    Health Care:
+      - Community Clinics
+      - STD Testing & Treatment
+      - Immunizations
+
+    Mental Health:
+      - Crisis Support
+      - Adult Mental Health
+      - Children's Mental Health
+      - Substance Use
+      - Support Groups
+
+    Education/Training:
+      - Vocational Training
+      - School Districts
+      - Community Colleges
 
   emergency:
     Emergency:
-      - Psychiatric Emergency
-      - Emergency Food
-      - Emergency Shelter
+      - Medical
+      - Mental Health
 
-    Reporting:
+    Safety:
       - Domestic Violence
-      - Child Abuse
+      - Human Trafficking
+      - Sex Trafficking
 
 ####################
 #
