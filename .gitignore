@@ -53,3 +53,4 @@ rerun.txt
 /config/application.yml
 
 .gemnasium.yml
+.idea
