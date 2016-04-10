@@ -551,10 +551,19 @@ body {
   }
 }
 
+#general-services {
+  float: left;
+  max-width: 70%;
+  text-align: left;
+}
+
 #emergency-services {
   border: 1px solid $list-search-important-border !important;
   background: $white;
   z-index: 9997;
+  float: left;
+  max-width: 16em;
+  text-align: left;
 
   > ul {
     > li {
