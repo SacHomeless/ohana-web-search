@@ -314,6 +314,46 @@ ul {
 
 .inside .main {
   background-color: $primary-lightest;
+  background-color: $light_yellow;
+}
+
+#org_name {
+  background: white;
+  color: black;
+  @include input-placeholder(rgba($black, 0.6), italic);
+
+  $color: $black;
+  $font-style: italic;
+
+  //input::input-placeholder {
+  //  color: $color;
+  //  font-style: $font-style;
+  //}
+
+  input::-webkit-input-placeholder {
+    color: $color;
+    font-style: $font-style;
+  }
+
+  input:-moz-placeholder {
+    color: $color;
+    font-style: $font-style;
+  }
+
+  input::-moz-placeholder {
+    color: $color;
+    font-style: $font-style;
+  }
+
+  input:-ms-input-placeholder {
+    color: $color;
+    font-style: $font-style;
+  }
+}
+
+input#location {
+  background: white;
+  @include input-placeholder(rgba($black, 0.6), italic);
 }
 
 //=================================================================================
@@ -387,6 +427,7 @@ body {
   vertical-align: top;
   width: 240px;
   background-color: $search-sidebar-bg;
+  background-color: $light-yellow;
   //border-right: 2px solid $primary;
 
   select {
@@ -489,10 +530,13 @@ body {
   overflow: hidden;
 
   span {
-     color: white;
+     // color: white;
   }
 }
 
+input#location {
+  color: black;
+}
 #search-options {
   font-family: $font_san_serif;
 

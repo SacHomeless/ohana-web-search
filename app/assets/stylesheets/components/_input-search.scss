@@ -6,7 +6,8 @@
 @include reset-input-ie();
 
 .input-search-small {
-  @include input-placeholder(rgba($white, 0.6), italic);
+  // @include input-placeholder(rgba($white, 0.6), italic);
+  @include input-placeholder(rgba($black, 0.6), italic);
   position:relative;
 
   input:focus {
@@ -149,7 +150,7 @@
 }
 
 .input-search-filter {
-  @include input-placeholder(rgba($white, 0.6), italic);
+  @include input-placeholder(rgba($black, 0.6), italic);
   position: relative;
 
   > label {
