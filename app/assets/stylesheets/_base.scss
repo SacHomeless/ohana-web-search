@@ -508,7 +508,7 @@ body {
 }
 
 .inside #keyword-search-box {
-  background: $primary;
+  background: tint($primary, 20);
 }
 
 #search-controls {
@@ -682,6 +682,10 @@ input#location {
 
   .button-map-zoom {
     border-right: 1px dotted $greyscale_light;
+  }
+
+  .button-map-zoom:hover {
+    background: $pagination-hover-bg;
   }
 
   .left-column {

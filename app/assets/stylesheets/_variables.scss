@@ -39,7 +39,7 @@ $accentA-dark: shade($accentA-base, 50);
 $accentB: rgb(255,200,56);
 
 // Complements.
-$complement-base: rgb(242,144,191);
+$complement-base: tint($green, 20);
 $complementA: shade($complement-base, 50);
 $complementB: tint($complement-base, 50);
 
