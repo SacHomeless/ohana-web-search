@@ -75,8 +75,6 @@ homepage_links:
     Food:
       - Hot Meals
       - Food Pantries
-      - EBT Locations
-      - WIC
 
     Health Care:
       - Community Clinics
@@ -95,7 +93,25 @@ homepage_links:
       - School Districts
       - Community Colleges
 
+    Public Assistance:
+      - EBT Food
+      - EBT Restaurants
+      - EBT Cash
+      - WIC
+
+    Employment:
+      - Employment
+
+    Legal Services:
+      - Legal Services
+
   emergency:
+    Street Sheet:
+      - Street Sheet
+
+    Youth:
+      - Youth
+
     Emergency:
       - Medical
       - Mental Health
