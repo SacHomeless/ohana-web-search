@@ -80,9 +80,9 @@ group :development do
   gem 'spring-watcher-listen'
 
   # For profiling the app's performance and memory usage.
-  gem 'derailed'
-  gem 'rack-mini-profiler'
-  gem 'flamegraph'
+  # gem 'derailed'
+  # gem 'rack-mini-profiler'
+  # gem 'flamegraph'
 end
 
 group :test do
