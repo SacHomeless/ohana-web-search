@@ -61,6 +61,11 @@ end
 
 # dev and debugging tools
 group :development do
+  gem "capistrano", "3.5"
+  gem "capistrano-rails", "~> 1.1"
+  gem "capistrano-rvm"
+  gem "capistrano-bundler", "~> 1.1.2"
+  gem "capistrano3-puma", github: "seuros/capistrano-puma"
   gem 'quiet_assets'
   gem 'better_errors'
   gem 'binding_of_caller', '~> 0.7.2', platforms: [:mri_19, :rbx]
