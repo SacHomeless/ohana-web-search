@@ -35,22 +35,22 @@ Rails.application.configure do
   # config/environments/development.rb and restart your server.
   # Don't forget to remove the redirection code from development.rb
   # when you're done testing.
-  config.middleware.insert_before(Rack::Runtime, Rack::Rewrite) do
-    if ENV['CANONICAL_URL'].blank?
-      raise 'The CANONICAL_URL environment variable is not set on your' \
-      ' production server. It should be set to your app\'s domain name,' \
-      ' without the protocol. For example: www.smc-connect.org, or' \
-      ' flying-tiger.herokuapp.com. If you\'re using Heroku, you can set it' \
-      ' like this: "heroku config:set CANONICAL_URL=your_domain_name". See' \
-      ' config/environments/production.rb in the source code for more details.'
-    else
-      canonical_url = ENV['CANONICAL_URL']
+  # config.middleware.insert_before(Rack::Runtime, Rack::Rewrite) do
+  #   if ENV['CANONICAL_URL'].blank?
+  #     raise 'The CANONICAL_URL environment variable is not set on your' \
+  #     ' production server. It should be set to your app\'s domain name,' \
+  #     ' without the protocol. For example: www.smc-connect.org, or' \
+  #     ' flying-tiger.herokuapp.com. If you\'re using Heroku, you can set it' \
+  #     ' like this: "heroku config:set CANONICAL_URL=your_domain_name". See' \
+  #     ' config/environments/production.rb in the source code for more details.'
+  #   else
+  #     canonical_url = ENV['CANONICAL_URL']
 
-      r301(%r{/organizations(.*)}, '/locations$1')
-      r301(/.*/, "http://#{canonical_url}$&",
-           if: proc { |rack_env| rack_env['SERVER_NAME'] != canonical_url })
-    end
-  end
+  #     r301(%r{/organizations(.*)}, '/locations$1')
+  #     r301(/.*/, "http://#{canonical_url}$&",
+  #          if: proc { |rack_env| rack_env['SERVER_NAME'] != canonical_url })
+  #   end
+  # end
 
   # --------------------------------------------------------------------------
   # CACHING SETUP FOR RACK:CACHE AND MEMCACHIER ON HEROKU
@@ -63,21 +63,21 @@ Rails.application.configure do
   # yet still be able to expire them through the digest params.
   config.assets.digest = true
 
-  config.action_controller.perform_caching = true
+  # config.action_controller.perform_caching = true
 
-  config.cache_store = :dalli_store
-  client = Dalli::Client.new((ENV['MEMCACHIER_SERVERS'] || '').split(','),
-                             username: ENV['MEMCACHIER_USERNAME'],
-                             password: ENV['MEMCACHIER_PASSWORD'],
-                             failover: true,
-                             socket_timeout: 1.5,
-                             socket_failure_delay: 0.2,
-                             value_max_bytes: 10_485_760)
-  config.action_dispatch.rack_cache = {
-    metastore:   client,
-    entitystore: client
-  }
-  config.static_cache_control = 'public, max-age=2592000'
+  # config.cache_store = :dalli_store
+  # client = Dalli::Client.new((ENV['MEMCACHIER_SERVERS'] || '').split(','),
+  #                            username: ENV['MEMCACHIER_USERNAME'],
+  #                            password: ENV['MEMCACHIER_PASSWORD'],
+  #                            failover: true,
+  #                            socket_timeout: 1.5,
+  #                            socket_failure_delay: 0.2,
+  #                            value_max_bytes: 10_485_760)
+  # config.action_dispatch.rack_cache = {
+  #   metastore:   client,
+  #   entitystore: client
+  # }
+  # config.static_cache_control = 'public, max-age=2592000'
   # --------------------------------------------------------------------------
 
   # --------------------------------------------------------------------------
