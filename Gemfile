@@ -104,5 +104,6 @@ group :test do
 end
 
 group :development, :test do
+  gem 'tzinfo-data'
   gem 'rspec-rails', '~> 3.1'
 end
